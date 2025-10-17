@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thumbnail Image Gallery</title>
+    <style>
+       body {
+           font-family: Arial,sans-serif;
+           text-align: center;
+       }
+  .gallery {
+     display :flex;
+     flex-wrap: wrap;
+     justify-content :center;
+     gap : 15px;
+     margin-top : 20px;
+    }
+  .gallery a img {
+     width : 100px;
+     height: 100px;
+     object-fit : cover;
+     border : 2px solid #ccc;
+     border-radius : 8px;
+     transition : transform 0.3s;
+     }
+   .gallery a img : hover {
+         transform :scale(1.1);
+         border-color : #666;
+       }
+</style>
+</head>
+<body>
+    <h1>My Image Gallery</h1>
+    <p>Click on a thumbnail to view the full-sized image</p>
+  <div class="gallery">
+     <a href="C:\Users\Himabindu\Downloads\WhatsApp Image 2025-07-17 at 11.42.51 AM.jpeg">
+     <img src="C:\Users\Himabindu\Downloads\WhatsApp Image 2025-07-17 at 11.42.51 AM.jpeg" alt="Image 1" width="50" height="50">
+     </a>
+  <a href="C:\Users\Himabindu\Downloads\WhatsApp Image 2025-07-10 at 9.36.32 PM.jpeg">
+     <img src="C:\Users\Himabindu\Downloads\WhatsApp Image 2025-07-10 at 9.36.32 PM.jpeg">
+     </a>
+  <a href="C:\Users\Himabindu\Downloads\WhatsApp Image 2025-07-13 at 5.52.54 PM.jpeg">
+     <img src="C:\Users\Himabindu\Downloads\WhatsApp Image 2025-07-13 at 5.52.54 PM.jpeg">
+     </a>
+ <a href="C:\Users\Himabindu\Pictures\Screenshots\Screenshot (126).png">
+     <img src="C:\Users\Himabindu\Pictures\Screenshots\Screenshot (126).png">
+     </a>
+</div>
+</body>
+</html>
+!--if target="_blank",the linked doc will open in a new tab or(on older browser) a new window-->
+
+
+  
+
