@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Page</title>
+  <script type="text/javascript">
+    function validation() {
+      var name = document.getElementById("name_id").value.trim();
+      var email = document.getElementById("email_id").value.trim();
+      var phone = document.getElementById("phone_id").value.trim();
+
+     
+      var namePattern = /^[A-Za-z][A-Za-z0-9]{5,}$/;
+      if (name === "") {
+        alert("Please enter your name");
+        return false;
+      } else if (!namePattern.test(name)) {
+        alert("Name must start with a letter, can contain alphanumeric characters, and be at least 6 characters long.");
+        return false;
+      }
+
+      var phonePattern = /^[0-9]{10}$/;
+      if (phone === "") {
+        alert("Please enter your mobile number");
+        return false;
+      } else if (!phonePattern.test(phone)) {
+        alert("Mobile number must contain exactly 10 digits");
+        return false;
+      }
+
+      
+      var emailPattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+      if (email === "") {
+        alert("Please enter your email");
+        return false;
+      } else if (!emailPattern.test(email)) {
+        alert("Please enter a valid email ID (e.g., user@example.com)");
+        return false;
+      }
+
+      alert("Registration Successful!");
+      return true;
+    }
+  </script>
+</head>
+
+<body>
+  <form onsubmit="return validation()" action="registration_app.php" method="POST">
+    <table align="center" cellpadding="5">
+      <tr>
+        <td colspan="2" align="center"><h2>Registration Form</h2></td>
+      </tr>
+      <tr>
+        <td>Name</td>
+        <td><input type="text" name="name" id="name_id" placeholder="Enter your name"></td>
+      </tr>
+      <tr>
+        <td>Email ID</td>
+        <td><input type="text" name="email" id="email_id" placeholder="Enter your email"></td>
+      </tr>
+      <tr>
+        <td>Mobile</td>
+        <td><input type="text" name="phone" id="phone_id" placeholder="10-digit number"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <input type="submit" value="SUBMIT">
+          <input type="reset" value="CLEAR">
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>
