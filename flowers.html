@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flower Store</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #333;
+    }
+    header {
+      background: #e91e63;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
+    nav {
+      background: #f8bbd0;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #880e4f;
+      cursor: pointer;
+    }
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 40px 20px;
+      background: #fce4ec;
+    }
+    .hero img {
+      width: 60%;
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    }
+    .hero h2 {
+      margin-top: 20px;
+      font-size: 2rem;
+      color: #ad1457;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #333;
+    }
+    /* Section Styling */
+    .section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .section h3 {
+      margin-bottom: 25px;
+      font-size: 1.8rem;
+      color: #ad1457;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+      background: #fff;
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .card h4 {
+      margin: 10px 0;
+      font-size: 1.3rem;
+      color: #c2185b;
+    }
+    footer {
+      background: #e91e63;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+    /* Shop Form */
+    #shop {
+      display: none;
+      background: #f8f9fa;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 400px;
+      margin: 30px auto;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    }
+    #shop label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #880e4f;
+    }
+    #shop input, #shop textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    #shop button {
+      background: #e91e63;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    #shop button:hover {
+      background: #c2185b;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🌸HIMO FLOWER STORE🌸</h1>
+    <p>Fresh Blooms for Every Occasion</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Bestsellers</a>
+    <a onclick="showShop()">Shop Now</a>
+    <a href="#">About Us</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="C:\Users\Himabindu\Pictures\Screenshots\Screenshot (320).png" alt="Flowers">
+    <h2>Beautiful Flowers, Just for You</h2>
+    <p>Get 20% off on your first order!</p>
+  </section>
+
+  <!-- Flowers Section -->
+  <section class="section">
+    <h3>Our Flowers</h3>
+    <div class="grid">
+      <div class="card">
+        <img src="C:\Users\Himabindu\Pictures\Screenshots\Screenshot (315).png" alt="Roses">
+        <h4>Roses</h4>
+        <p>Symbol of love and beauty.</p>
+      </div>
+      <div class="card">
+        <img src="C:\Users\Himabindu\Pictures\Screenshots\Screenshot (316).png" alt="Tulips">
+        <h4>Tulips</h4>
+        <p>Bright and cheerful spring flowers.</p>
+      </div>
+      <div class="card">
+        <img src="C:\Users\Himabindu\Pictures\Screenshots\Screenshot (317).png" alt="Lilies">
+        <h4>Lilies</h4>
+        <p>Elegant blooms for every occasion.</p>
+      </div>
+      <div class="card">
+        <img src="C:\Users\Himabindu\Pictures\Screenshots\Screenshot (318).png" alt="Sunflowers">
+        <h4>Sunflowers</h4>
+        <p>Bright and bold, full of sunshine.</p>
+      </div>
+      <div class="card">
+        <img src="C:\Users\Himabindu\Pictures\Screenshots\Screenshot (319).png" alt="Orchids">
+        <h4>Orchids</h4>
+        <p>Exotic flowers full of charm.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shop Now Section -->
+  <section id="shop">
+    <h3>Enter Your Address</h3>
+    <form>
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" required>
+      
+      <label for="address">Address:</label>
+      <textarea id="address" rows="4" required></textarea>
+      
+      <label for="pincode">Pincode:</label>
+      <input type="text" id="pincode" required>
+      
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- About Section -->
+  <section class="section">
+    <h3>About Us</h3>
+    <p>We provide fresh, hand-picked flowers for every occasion — weddings, birthdays, and daily joys. Bringing nature’s beauty to your life.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Flower Store | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function showShop() {
+      document.getElementById("shop").style.display = "block";
+      window.scrollTo({ top: document.getElementById("shop").offsetTop, behavior: "smooth" });
+    }
+  </script>
+
+</body>
+</html>
+s
